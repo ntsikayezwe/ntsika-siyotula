@@ -1,0 +1,38 @@
+if %info% == y goto menu
+if %info% == y goto menu
+if %info% == n goto menu
+if %info% == N goto menu
+goto info
+
+:lvl1
+cls
+color 0a
+echo answer
+echo When did the 21st centry start?
+echo a.2000
+echo b.2010
+echo c.1900
+echo d.1950
+set ?p ha= back to wher we
+
+if %ha% == a goto crl
+if %ha% == b goto wrl
+if %ha% == c goto wrl
+if %ha% == d goto wrl
+goto lvl1
+
+:crl
+echo Correct!
+echo.
+echo Continue? (y/n)
+set /p ha=
+
+if %ha% == y goto lvl2
+if %ha% == n goto lvl1
+goto crl
+
+:wrl
+echo too bad
+echo .
+pouse
+
